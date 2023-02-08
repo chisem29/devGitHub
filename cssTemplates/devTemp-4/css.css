@@ -1,0 +1,99 @@
+body {
+    margin : 0;
+    padding : 0;
+    background: rgb(226, 218, 218);
+}
+
+.sections-wrap {
+    padding-top : 100px;
+    padding-bottom : 50px;
+}
+
+#card-of {
+    text-align: center; color : white; padding-bottom: 20px; position: relative; transition: all 0.3s; overflow : hidden; opacity: 0.95;
+    display: flex; justify-content: end; align-items: center; flex-direction: column; height : 360px; box-shadow: 0px -1px 8px 1px #000; 
+}
+
+#card-of > img {
+    position: absolute; width : 100%; min-width : 100%;
+    pointer-events: none; height : 100%; bottom : 0
+}
+
+#card-of > #title-of {
+    font-size: 20px; text-transform: capitalize; font-weight: bold; 
+    font-family : Verdana, Geneva, Tahoma, sans-serif; bottom: 20px; position: absolute;
+}
+
+#card-of > #inner-of {
+    width : 76%; font-family: Cardo; font-size: 17px; font-variant: normal; 
+    font-weight: 400; line-height: 25px; font-style: italic; color : rgb(231, 228, 228)
+}
+
+#card-of > *:not(img) {
+    z-index: 100;
+}
+
+#card-of > #btn-of {
+    width : 130px; flex-basis: 36px; border : 0; color : #fff;
+    text-transform: uppercase; background-color: #000;
+    font-size : 11px; font-weight: 660;
+}
+
+#card-of > #btn-of:hover {
+    color: #000; background: linear-gradient(to bottom, whitesmoke, rgb(219, 207, 207));
+}
+
+#card-of:hover > #title-of {
+    position: relative;
+}
+
+#card-of > button, #card-of > p {
+    transform : translateY(200%); opacity: 0;
+}
+
+#card-of:hover > p, #card-of:hover > button  {
+    transform : translateY(0%); opacity: 1;
+}
+
+#card-of > * {
+    transition : all 0.4s;
+}
+
+#card-of:hover {
+    opacity: 1;
+}
+
+#card-of:hover > img {
+    transform: scale(101%) translateY(6%); 
+    height : 110%;
+}
+
+#card-of:hover > #dark-of {
+    background : linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.514)); 
+    width : 100%; position: absolute; top : 0; left : 0; height : 100%; 
+}
+
+@media (max-width : 1199px) {
+    #card-of {
+        max-width : 400px; min-width : 270px
+    }
+}
+
+@media (max-width : 767px) {
+    #card-of {
+        width : auto; min-width: 450px; max-width : none
+    }
+}
+
+
+@media (max-width : 575px) {
+    #card-of {
+        width : auto; min-width: 250px;
+    }
+}
+
+@media (max-width : 280px) {
+    .sections-wrap {
+        transform: scaleX(70%);
+    }
+}

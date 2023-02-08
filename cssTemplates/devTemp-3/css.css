@@ -1,0 +1,62 @@
+body {
+    margin: 0; padding: 0; 
+    background: #000; 
+}
+
+#img-body {
+    opacity: 0.11; pointer-events: none; cursor: default; 
+    min-height: 100%; width: 100%; height: auto; position: fixed; top: 0; left: 0;
+}
+
+#wrapper {
+    padding-top: 100px;
+}
+
+.main-wrap {
+    z-index: 100;
+}
+
+.sections-main {
+    gap : 60px; flex-wrap: wrap;
+}
+
+.sections-main > .row {
+    gap : 30px; flex-wrap: wrap; justify-content: center;
+}
+
+#section-main {
+    display : flex; flex-direction : column;
+    align-items : center; gap : 13px; max-width : 200px
+}
+
+#section-main > #title-of {
+    font-size : 50px; color : rgb(235, 231, 231); letter-spacing : 2px; transition: 0.12s;
+    font-weight : 600; font-family : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#section-main > #title-of:hover {
+    transform: scale(107%);
+}
+
+#section-main > #border-of {
+    border-bottom: 2px solid rgb(66, 181, 116); width : 40px; 
+}
+
+#section-main > #content-of {
+    color : rgba(211, 211, 211, 0.911); text-transform : capitalize; text-align : center; letter-spacing: 1.2px; line-height : 20px; opacity : 0.95;
+    font-size : 17px; font-family : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight : lighter;
+}
+
+#section-main > #title-of > img {
+    transform : scale(180%);
+}
+
+.btn-main {
+    text-transform: uppercase; border : none; color : white; font-weight: bold; flex-basis: 62px; transition: all 0.2s;
+    background-color : #42b574; border-radius: 4px; font-size: 20px; padding: 0 40px 0px 40px;
+}
+
+.btn-main:hover,
+  .btn-main:active {
+    background: linear-gradient(-180deg, #41a56c, #2c7a4e); color : rgb(226, 221, 221)
+}
