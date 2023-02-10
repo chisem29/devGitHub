@@ -1,0 +1,92 @@
+body, html {
+    background-color: rgb(251, 251, 251);
+    position: relative; height : 100%
+}
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -90px; 
+}
+
+#wrapper .header-wrap {
+    position: relative; 
+    margin-top : 40px;
+    padding : 0 8px 0 8px
+}
+
+#wrapper .header-wrap .img {
+    max-height: 624px;
+    min-width : 300px; 
+    min-height : 480px;
+    pointer-events: none;
+}
+
+#wrapper .header-wrap h1 {
+    position: absolute; bottom : 240px; font-weight: 500; text-align: center;
+    color : whitesmoke; font-family: Montserrat, sans-serif;
+}
+
+#wrapper .main-wrap {
+    position: relative; 
+}
+
+#wrapper .main-wrap .container {
+    position: absolute; top : -170px;
+}
+
+#wrapper .main-wrap .col-md-4 {
+    max-width : 300px; 
+}
+
+#wrapper .main-wrap #card-of {
+    background-color: #fff; max-width : 300px;
+    padding : 50px 20px 40px 20px
+}
+
+#wrapper .main-wrap #card-of {
+    text-align: center;
+    border-top: 8px solid orange;
+}
+
+#wrapper .main-wrap #card-of h4 {
+    font-family: Montserrat;
+}
+
+#wrapper .main-wrap #card-of p {
+    padding: 10px 0px 15px 0px; font-size : 17px; color : #241e1280;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#wrapper .main-wrap #card-of button {
+    border-radius: 20px; background-color: orange;
+    border : 0; width : 100px; text-transform: uppercase;
+    padding: 8px 0 10px 0; color : whitesmoke; font-weight: 650;
+    font-size: 17px; transition: all 0.3s;
+}
+
+#wrapper .main-wrap #card-of button:hover {
+    background-color: #dda0dd; color : #000
+}
+
+#wrapper .footer-wrap { 
+    position: absolute; width : 100%; height : 90px; 
+    background-color: #333333; bottom: 0; left : 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; color : white;
+}
+
+#ref-footer { color : #b0d9f2; }
+
+#ref-footer:hover,
+ #ref-footer:active { text-decoration : none; color : gray; }
+
+@media (max-width : 767px) { 
+    #wrapper .footer-wrap {
+        bottom : -610px
+    }
+    #wrapper .main-wrap .row {
+        display: block;
+    }
+}
