@@ -1,0 +1,119 @@
+html {
+    
+    background-repeat: no-repeat;
+    background-size : cover;
+    background-image: url("background-1.png");
+
+}
+
+body, html {
+
+    display : block;
+    margin : auto;
+    max-width : 100%
+
+}
+
+header.wrap-header {
+
+    margin-top: 8%;
+    text-align: center;
+
+    color: rgb(8, 8, 8);
+
+}
+
+header.wrap-header > div.header-title {
+
+    font-size: 34px;
+    font-family: sans-serif;
+    font-weight: bolder;
+
+    text-shadow: 2px 2px rgb(34, 26, 26);
+}
+
+header.wrap-header > div.header-context {
+
+    font-size: 20px;
+    width : 65%;
+    text-align: center;
+
+}
+
+
+main.wrap-main > section > div {
+
+    background-color: rgb(231, 218, 218);
+    box-shadow: 3px 3px rgb(34, 26, 26);
+    width : 240px; margin-left: 8%;
+    height : 240px; min-width: 100px;
+    
+}
+
+main.wrap-main > section {
+
+    display: flex; margin-left: 10%;
+    text-shadow: 2px 2px rgb(156, 131, 131);
+
+}
+
+main.wrap-main > section > div > div:not(#tabContent) {
+
+    font-size: 18px;
+    color : rgb(5, 5, 5);
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+     'Lucida Grande', sans-serif;
+    font-weight: bolder;
+    margin-left: 8%;
+
+}
+
+main.wrap-main > section > div > div[id="tabContent"] {
+
+    font-family: sans-serif;
+    font-size: 16px;
+
+    margin-left : 5%;
+    width : 90%
+
+}
+
+footer.wrap-footer {
+    position: absolute; bottom: 0; width : 100%;
+
+}
+
+footer.wrap-footer > div.footer-networks {
+
+    background: linear-gradient(65deg,  rgb(231, 214, 214),  rgb(216, 199, 199)); text-align: center;
+    color: rgb(19, 17, 17); max-height: 300px; min-height: 150px; text-shadow: 2px 2px rgb(156, 131, 131);
+
+}
+
+footer.wrap-footer > div.footer-networks > div.footerNetwork-Title {
+
+    font-size: 22px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center; text-decoration: solid; font-weight: bolder; 
+
+}
+
+footer.wrap-footer > div.footer-networks > #group  {
+
+    display : flex;  margin-left: 36%; margin-top: 2%;
+
+}
+
+footer.wrap-footer > div.footer-networks > #group > #footerNet {
+
+    margin-left : 5%; font-size: 19px; font-family: sans-serif; text-justify: newspaper;
+
+}
+
+footer.wrap-footer > div.footer-corparation {
+
+    background: linear-gradient(65deg, rgb(197, 183, 183), rgb(160, 144, 144));
+    color: rgb(39, 23, 23); max-height: 200px; min-height: 80px; text-shadow: 2px 2px rgb(156, 131, 131);
+    font-size: 17px; text-align: center; opacity: 0.65; font-weight: bolder; text-decoration: line-through;
+
+}

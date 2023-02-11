@@ -1,0 +1,274 @@
+body {
+    display: block;
+    margin: auto; 
+
+    background-image: url('imgs/Background.png');
+    align-self: start;
+
+    height: 100%
+
+}
+
+header.Head {
+    background-color: black;
+    height: 90px;
+
+    color:  rgb(206, 203, 203);
+
+    margin: auto;
+    box-shadow: 3px 4px rgb(8, 8, 8);
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+nav.navigation {
+
+    background-color: rgb(6, 5, 5);
+    height: auto+10px;
+
+}
+
+li[id="native"] {
+
+    color:rgb(190, 185, 185);
+
+    font-size: 25px;
+    font-family: Verdana, sans-serif;
+
+    margin: 0px 60px;
+    text-shadow: 4px 3px rgb(18, 18, 18);
+
+}
+
+li[id="native"]:hover, ul[id="native-class"]:hover, 
+    a[id='form-who'][dir='1']:hover, a[id="referens"]:hover, 
+    ul[id="native-class"] :hover{
+
+    color: grey;
+
+} 
+
+ul[id="native-class"] {
+
+    font-size: 20px;
+    font-family: Verdana, sans-serif;
+
+    text-shadow: 4px 3px rgb(18, 18, 18);
+    margin: 10px 10px;
+
+}
+
+div[id="content"] {
+
+   height: 75%;
+   width: 75%;
+   background-color: rgb(11, 9, 9);
+
+   margin-top: -10px;
+   margin-left: 12%;
+
+}
+
+hr{
+    color:aliceblue;
+    box-shadow: 3px 4px rgb(8, 8, 8);
+}
+
+div[id="Title"] {
+
+    color: rgb(206, 203, 203);
+    font-size: 40px;
+
+    text-align: center;
+    font-family:  sans-serif;
+    text-shadow: 9px 8px rgb(15, 13, 13);
+
+}
+
+dd {
+
+    margin-top: 9px;
+
+}
+
+footer {
+
+    height: 60px;
+    background-color: rgb(8, 8, 8);
+	
+}
+
+div[class='footer-1'], a[class='footer-2'] {
+
+    font-size: 13px;
+    color: rgb(145, 131, 131);
+
+    text-align: center;
+
+}
+
+div[class="title-content"] {
+
+    color: rgb(206, 203, 203);
+
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font-size: 36px;
+    background-color: rgb(7, 6, 6);
+
+    text-shadow: 5px 4px rgb(24, 19, 19);
+
+}
+
+div[id="content-firstText"], div[id="content-secondText"] {
+
+    color: rgb(196, 189, 189);
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 19px;
+
+    margin: 30px 160px;
+    text-shadow: 4px 3px rgb(24, 19, 19);
+}
+
+div[class='main-body'] {
+
+    margin-left: 50px;
+
+}
+
+div[class='title-1'], div[class='title-2'] {
+
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    margin-top: 40px;
+    text-shadow: 4px 3px rgb(24, 19, 19);
+
+    color: rgb(196, 189, 189);
+    font-size: 24px;
+
+}
+
+br {
+
+    margin-bottom: 1em !important;
+
+}
+
+div[id="line-content"] {
+
+    height: 30px;
+
+    background-color:rgb(9, 8, 8);
+    box-shadow: 0px 3px rgb(15, 12, 12);
+
+}
+
+a[id="referens"] {
+
+    color: white;
+    margin-left: 70%;
+    
+
+}
+
+fieldset[id="form-1"], fieldset[id="form-2"], input {
+
+    width: 45%;
+    box-shadow: 5px 6px  rgb(15, 13, 13);
+
+    line-height: normal;
+    border-radius: 4px;
+
+}
+
+fieldset[id="form-1"], fieldset[id="form-2"], button{
+    
+    border-radius: 4px;
+
+}
+
+li {
+
+    margin-top: 5px;
+
+}
+
+ul[class="questions"] {
+
+    font-size: 17px;
+    color: rgb(190, 185, 185)
+
+}
+
+label {
+
+    font-size: 17px;
+    color: rgb(170, 165, 165)
+
+}
+
+button[id="Log-Send"] {
+
+    text-align: center;
+    margin: 5% 45%;
+
+    box-shadow: 3px 4px  rgb(15, 13, 13);
+    width: 14%;
+
+    font-size: 14px;
+    font-family: Geneva, Verdana, sans-serif;
+
+    text-transform: lowercase;
+    text-decoration: dashed;
+
+    color: rgb(11, 9, 9);
+    text-shadow: 2px 3px  rgb(145, 131, 131);
+
+    background-color: rgb(194, 181, 181);
+
+}
+
+legend[id="legend-1"] { 
+
+    font-size: 20px;
+    color: rgb(190, 185, 185)
+}
+
+input {
+
+    margin-top: 6px;
+    margin-left: 19%;
+    text-decoration: underline;
+
+    font-size: 14px;
+
+}
+
+div[id="under-text"] {
+
+    margin: 30px 12%;
+    color: rgb(180, 176, 176);
+
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    font-style: normal;
+
+}
+
+a[id='referens'][dir='2-90'], a[id='referens'][dir='2+90'] {
+    
+    margin-left: auto;
+
+}
+
+a[class='footer-2'] {
+
+    margin-top: -5%;
+    font-size: 17px;
+
+}

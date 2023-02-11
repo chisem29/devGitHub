@@ -1,0 +1,15 @@
+html, body {
+
+    width : 100%; max-width : 100%; min-width : 50%;
+    height : auto; display : block; margin : auto
+
+}
+
+#wrapper > *{
+
+    width : 100%
+
+}
+
+
+
