@@ -1,0 +1,26 @@
+
+@mixin border 
+  color: #1f1e1e
+  width: 1px
+  style: solid
+  @content
+
+.card 
+  border:
+    @include border
+      radius: 6px
+  display: flex
+  flex-direction: column
+  width: 200%
+  
+.header
+  color: dark
+  border:
+    bottom:
+      @include border
+
+.footer
+  color: dark
+
+.main
+  color: dark
