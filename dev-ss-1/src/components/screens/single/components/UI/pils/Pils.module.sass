@@ -1,0 +1,18 @@
+
+@use "../../../Single.module"
+
+.pilsBox
+  position: relative
+  max-width: 80vw
+  
+.navPils
+  display: flex
+  flex:
+    direction: row
+  position: relative
+  z-index: 1
+  & > a
+    @extend %infoOuterNavigation
+
+.contentPils
+  @extend %infoOuterBody

@@ -1,0 +1,147 @@
+
+@use "../../../styles/tools/SrcFromDtW" as helperModule
+
+$greyColor : #999
+$greyColor2 : #505050
+
+.contactPage
+  position: relative
+  & > .container
+    padding: 0 min(10%, 100px)
+    position: relative
+  iframe
+    filter: grayscale(100%)
+    border: 0
+    width: 100%
+    max-width: 100vw
+
+.titleOf
+  h5
+    font:
+      size: 45px
+      weight: 600
+    letter-spacing: 2px
+    text:
+      transform: uppercase
+      shadow: 0 2px 2px #000
+    margin:
+      bottom: 0
+  small
+    letter-spacing: 4px
+    color: $greyColor
+    font:
+      size: 12px
+    text:
+      transform: capitalize
+  text:
+    align: center
+
+.formOf
+  .legendOf
+    color: #fb383b
+    font:
+      size: 18px
+      weight: 700
+    letter-spacing: 1.5px
+  .fieldsetOf
+    .col
+      &:not(:nth-child(1), :nth-child(2))
+        margin:
+          top: 10px
+  & > .container
+    & > .row
+      & > .col
+        &:first-child
+          & > .container
+            gap: 15px
+            @extend %noPadding
+  input, textarea
+    cursor: text!important
+    width: 100%
+    border:
+      radius: 0!important
+    background: #f7fafc
+    color: #757575
+    &:focus-visible, &:hover
+      background: #f7fafc
+    &::placeholder
+      text:
+        transform: capitalize
+      letter-spacing: 1.25px
+      font:
+        size: 15px
+      color: #808080
+  input
+    height: 50px
+  textarea
+    height: 150px!important
+    resize: none
+  button
+    background: #000
+    color: #fff
+    font:
+      size: 15px
+      weight: 650
+    letter-spacing: 1.5px
+    text:
+      transform: uppercase
+    height: 50px
+    width: 100%
+
+.listInfo
+  margin:
+    top: 20px
+  gap: 15px
+  li
+    & > div
+      gap: 50px
+      width: 100%
+      .imgLi
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 50px
+        min-heigth: 50px
+        max-height: 50px
+        border: 4px solid #000 
+          radius: 50%
+        img
+          width: 40%
+          min-height: 40%
+          filter: brightness(1000%) grayscale(100%) opacity(0.1) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b)
+      .descriptionLi
+        h6
+          font:
+            size: 14px
+        small
+          font:
+            weight: 300
+            size: 14px
+          a
+            transition: color 0.5s
+            text-decoration: none
+            color: #868686
+            font:
+              weight: 400
+            &:hover, &:active
+              color: #fb383b
+        letter-spacing: 1.5px
+
+@media screen and (max-width: 768px)
+  .formOf
+    & > .container
+      & > .row
+        gap: 20px
+        & > .col
+          &:first-child
+            & > .container
+              & > .row
+                &:last-child
+                  gap: 20px
+  .fieldsetOf
+    & > .container
+      & > .row
+        gap: 15px
+        .col
+          margin:
+            top: 0

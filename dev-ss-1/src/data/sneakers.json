@@ -1,0 +1,53 @@
+{
+  "sneakers" : [
+    {
+      "name" : "Adidas gazelle",
+      "src" : ["https://avatars.mds.yandex.net/i?id=85dc27e19ff4a1aef249b0b978c8c3ce1449591e-9101109-images-thumbs&n=13"],
+      "price" : 200
+    },
+    {
+      "name" : "Vans Old School",
+      "src" : ["https://avatars.mds.yandex.net/i?id=79f2b5ba7f879f9cc77d175b572e9dd9ed906286-7575569-images-thumbs&n=13"],
+      "price" : 170
+    },
+    {
+      "name" : "Converse All Star",
+      "src" : ["https://avatars.mds.yandex.net/i?id=058ab665b048d9cf31292b79c8619415246c9fff-8241279-images-thumbs&n=13"],
+      "price" : 230
+    },
+    {
+      "name" : "Puma Ferrari",
+      "src" : ["https://avatars.mds.yandex.net/i?id=f227a83a5f2e54122a269be3c2a1cbdaa73ccac2-7664089-images-thumbs&n=13"],
+      "price" : 2000
+    },
+    {
+      "name" : "Rebook Classik Leather",
+      "src" : ["https://avatars.mds.yandex.net/i?id=ef852afe630ee8c810c0d6294db5e7e89622abd8-4589186-images-thumbs&n=13"],
+      "price" : 160
+    },
+    {
+      "name" : "Nike Blazer Low Vintage",
+      "src" : ["https://avatars.mds.yandex.net/i?id=8ad954992afb44233b702291c3a8b1d7365f5ec6-6332308-images-thumbs&n=13"],
+      "price" : 300
+    },
+    {
+      "name" : "Kefteme Tagi",
+      "src" : ["https://avatars.mds.yandex.net/i?id=ce2061885d8b91c07977877a93e838b049f2bb23-8263641-images-thumbs&n=13"],
+      "price" : 1000
+    },
+    {
+      "name" : "Nike Jordan 1",
+      "src" : [
+        "https://avatars.mds.yandex.net/i?id=b45b6c9379ff3c2c10294be55da21fd5a1fcc275-8342321-images-thumbs&n=13", 
+        "https://mpox.ru/image/cache/catalog/Foto%20Tovara/Jordan%201%20M/1203221937/15367758_26939180_1000-1000x1000-400x400.jpg",
+        "https://mpox.ru/image/cache/catalog/Foto%20Tovara/Jordan%201%20M/1203221937/15367758_26939179_1000-1000x1000-400x400.jpg"
+      ],
+      "price" : 320
+    },
+    {
+      "name" : "Converse Chunk Taylor All Star Low",
+      "src" : ["https://avatars.mds.yandex.net/i?id=83cceeab6e836dd84ec6d9035e69732cb736ae75-7942200-images-thumbs&n=13"],
+      "price" : 170
+    }
+  ]
+}

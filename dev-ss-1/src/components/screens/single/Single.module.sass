@@ -1,0 +1,258 @@
+
+@use "../../../styles/tools/SrcFromDtW" as helperModule
+
+.container
+  &.singleGeneral
+    padding: 30px 5%!important
+    display: flex
+    flex:
+      direction: column
+    gap: 30px
+
+.infoSneaker
+  flex:
+    direction: row
+  gap: 30px
+  .mainInfoSneaker
+    gap: 10px
+    h3
+      text:
+        transform: uppercase
+      color: #fb383b
+      font:
+        size: 23px
+        weight: 600
+    .offSneaker
+      font:
+        size: 20px
+        weight: 400
+    .rsSneaker
+      gap: 10px
+      s
+        font:
+          weight: 200
+          size: 17px
+        letter-spacing: 1.5px
+      h6
+        font:
+          size: 20px
+    button
+      color: #fff
+      transition: background 0.5s
+      text:
+        transform: uppercase
+      font:
+        weight: 700
+        size: 14px
+      height: 40px
+      max-width: 200px
+      letter-spacing: 1.5px
+      background: #fb383b
+      &:hover, &:active
+        background: #000
+    .shareSnekear
+      gap: 10px
+      span
+        text:
+          transform: capitalize
+        letter-spacing: 1.5px
+        font:
+          size: 15px
+          weight: 300
+        align-self: flex-end
+    .starsAccess
+      gap: 4px
+      img
+        height: 12px
+        width: 12px
+      a
+        transition: all 0.2s
+        cursor: pointer
+        &:hover, &:focus
+          filter: brightness(1000%) grayscale(100%) opacity(0.1) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b)
+  .imageBox
+    gap: 5px
+    flex-basis: max(30%, 30%)
+  .generalImg
+    flex-basis: 400px
+    height: 100%
+    img
+      width: 100%
+      height: 100%
+  .otherImages
+    width: 100%
+    gap: 5px
+    div
+      flex-basis: calc(33.33% - 5px)
+      position: relative
+      &:hover, &:active
+        cursor: pointer
+        &::before
+          background: 0
+      &::before
+        z-index: 1
+        transition: all 0.5s
+        position: absolute
+        content: ""
+        background: #fffdfd4d
+        width: 100%
+        height: 100%
+      img
+        width: 100%
+      &.activeImage
+        &::before
+          background: 0
+
+@media screen and (max-width: 768px)
+  .infoSneaker
+    flex:
+      direction: column
+
+.sneakersBox
+  width: 100%
+  display: flex
+  flex:
+    direction: column
+  h4
+    font:
+      size: 20px
+      weight: bolder
+  div
+    max:
+      width: 95%
+    display: grid
+    gap: 1em
+    grid-template-columns: repeat(4, minmax(10%, 1fr))
+    grid-template-rows: auto
+
+%infoOuterNavigation
+  &.activeNav
+    background: #fa6b6d
+    position: relative
+    &::after
+      content: ""
+      width: 15px
+      height: 30px
+      background: #fa6b6d
+      position: absolute
+      top: 50%
+      transform: rotate(45deg)
+      z-index: -1
+  letter-spacing: 1.5px
+  display: flex
+  font:
+    size: 14px
+    weight: 700
+  text:
+    transform: uppercase
+  justify-content: center
+  align-items: center
+  padding: 0 min(200px, 10%)
+  height: 45px
+  cursor: pointer
+
+%infoOuterBody
+  z-index: 0
+  & > div
+    display: none
+    &.showContent
+      display: block
+      &.content1, &.content3
+        h5
+          letter-spacing: 1.5px
+          font:
+            size: 18px
+            weight: 650
+          color: #1a1212c7
+      &.content2
+        padding: min(70px, 10%) 1%!important
+        .container
+          gap: 20px
+          & > .row
+            &:first-child
+              & > .col
+                &:first-child
+                  img
+                    height: 50%
+                &:last-child
+                  gap: 20px
+                  div
+                    h5, a
+                      font:
+                        size: 13px!important
+                        weight: 600
+                      letter-spacing: 1.5px
+                      color: #fb383b
+                      text:
+                        transform: uppercase
+                    a
+                      transition: color 0.5s
+                      &:active, &:hover, &:focus-visible
+                        color: #000
+                        img
+                          filter: none
+                      img
+                        transition: filter 0.5s
+                        height: 1.5em
+                        filter: brightness(1000%) grayscale(100%) opacity(0.1) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b)
+                      text:
+                        decoration: none
+            &:last-child
+              form
+                legend
+                  font:
+                    size: 15px
+                    weight: 650
+                  text:
+                    transform: uppercase
+                  letter-spacing: 1.5px
+                div
+                  &.container
+                    @extend %noPadding
+                  input
+                    flex-basis: 50%
+                    cursor: text!important
+                  &.row
+                    gap: 10px
+                input, textarea
+                  border:
+                    radius: 0
+                textarea
+                  min-height: 100px
+                button
+                  color: #fff
+                  background: #fb383b
+                  transition: background 0.5s
+                  font:
+                    weight: 600
+                    size: 15px
+                  letter-spacing: 1.5px
+                  flex:
+                    basis: 50px
+                  width: min(100%, 350px)
+                  text:
+                    transform: uppercase
+                  &:hover, &:active
+                    background: #000
+                gap: 20px
+      p
+        letter-spacing: 2px
+        font:
+          size: 14px
+        color: #888
+        line-height: 1.75rem
+  width: 80vw
+
+
+@media screen and (max-width: 1320px)
+  .sneakersBox
+    div
+      grid-template-columns: repeat(2, minmax(10%, 1fr))
+
+@media screen and (max-width: 768px)
+  .sneakersBox
+    div
+      grid-template-columns: repeat(1, minmax(10%, 1fr))
+
+.row
+  @extend %noGridColAndRow

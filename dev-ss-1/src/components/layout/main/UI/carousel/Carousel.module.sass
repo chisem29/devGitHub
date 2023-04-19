@@ -1,0 +1,97 @@
+@use '../../../../screens/home/Home.module' as homeStyles
+
+.carousel
+  overflow-x: hidden
+  
+.container
+  .col
+    display: flex!important
+    flex:
+      direction: column!important
+  @extend %noPadding
+  @extend %noGridColAndRow
+
+.innerCarousel
+  position: relative
+  .innerItem
+    display: flex
+    flex:
+      direction: column
+    opacity: 0
+    height: 0
+    transition: opacity 1s ease-in-out
+    &.activeItem
+      opacity: 1
+      height: auto
+    .row
+      flex-basis: 325px
+      img
+        max-height: 100%
+        flex-basis: 100%
+
+.col
+  &:first-child
+    display: flex!important
+    flex:
+      direction: column!important
+      basis: 1000px
+  
+.indicatorsContain
+  background: #fb383b
+  display: flex
+  flex:
+    direction: row!important
+    wrap: wrap
+    basis: 100%
+  align-items: center
+  justify-content: space-around
+  max-height: 325px
+  h5
+    font:
+      size: 25px
+    @extend %h5
+  div
+    position: relative
+    display: flex
+    flex:
+      direction: column
+      wrap: wrap
+    gap: 20px
+    a
+      display: flex
+      flex-basis: 40px
+      width: 40px
+      align-items: center
+      justify-content: center
+      align:
+        self: flex-start
+      cursor: pointer
+      transition: all 1s
+      border:
+        width: 1px
+        radius: 50%
+        color: #000
+        style: solid
+      &:hover, &:focus, &:focus-visible
+        @extend %darkToWhite
+      &:last-child
+        img
+          transform: rotate(180deg)
+      user-select: none
+
+@media screen and (max-width: 768px)
+  .indicatorsContain
+    div
+      position: absolute
+      min-width: 100%
+      z-index: 2
+      height: 100%
+      a
+        height: 35px
+        width: 35px
+        position: absolute
+        &:first-child
+          left: 20px
+        &:last-child
+          right: 20px
+        top: 100px

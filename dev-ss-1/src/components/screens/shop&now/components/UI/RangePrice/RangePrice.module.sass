@@ -1,0 +1,22 @@
+
+@use "../../../Shop&Now.module" as ShopNow
+
+.h6
+  @extend %h6
+
+.priceRange
+  -webkit-appearance: none
+  cursor: pointer
+  background: linear-gradient(90deg, #000 0%, #ddd 0%)
+  height: 5px
+  &::-webkit-slider-thumb
+    -webkit-appearance: none
+    height: 16px
+    width: 16px
+    border-radius: 50%
+    background: #fb383b  
+  
+.smallText
+  font:
+    size: 14px
+  letter-spacing: 1.5px

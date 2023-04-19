@@ -1,0 +1,32 @@
+
+$colorRed : #fb383b  
+
+.titleOf
+  font:
+    size: 25px
+  letter-spacing: 2px
+.form
+  & > div:first-child
+    flex-basis: 300px
+    height: 45px
+    input 
+      border:
+        radius: 0
+      &::placeholder
+        font:
+          size: 14px
+        letter-spacing: 2px
+    button
+      width: 100px
+      outline: none
+      border: 0
+      background: 
+        color: $colorRed 
+      color: white
+      text:
+        transform: uppercase
+      weight: 700!important
+      cursor: pointer
+      transition: background 1s 
+      &:hover, &:focus
+        background: #000

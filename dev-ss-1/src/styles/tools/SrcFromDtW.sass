@@ -1,0 +1,19 @@
+
+@mixin methodFDTW
+  filter: brightness(0) invert(1)
+
+@mixin setFlex($dir)
+  display: flex
+  flex:
+    direction: $dir
+
+%noPadding
+  padding: 0
+  margin: 0
+  border: 0
+
+%noGridColAndRow
+  .row 
+    @extend %noPadding
+    .col
+      @extend %noPadding

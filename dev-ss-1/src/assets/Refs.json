@@ -1,0 +1,11 @@
+{
+  "cart" : "https://img.icons8.com/ios-glyphs/1x/return-purchase.png",
+  "search" : "https://img.icons8.com/external-kmg-design-glyph-kmg-design/1x/external-search-ui-essentials-kmg-design-glyph-kmg-design.png",
+  "tab" : "https://img.icons8.com/ios-filled/1x/menu.png",
+  "close" : "https://img.icons8.com/ios-glyphs/1x/delete-sign.png",
+  "header" : {
+    "variant1" : "",
+    "variant2" : []
+  },
+  "home" : [""]
+}

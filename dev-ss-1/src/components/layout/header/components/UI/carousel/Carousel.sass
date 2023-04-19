@@ -1,0 +1,82 @@
+@use "../../../Header.module" as header
+  
+.carousel
+  height: 100%
+  width: 100%
+  display: flex
+  justify-content: center
+  .carousel-inner
+    height: 100%
+    .carousel-item
+      opacity: 0
+      transition: opacity 0.5s ease-in
+      height: 100%
+      text-align: center
+      img
+        width: 100%
+        height: 100%
+      .carousel-caption
+        position: absolute
+        bottom: 200px
+        .caption-title
+          font:
+            size: 175px
+            weight: 700
+          letter-spacing: 1.5px
+        .caption-body
+          text:
+            align: center
+            transform: uppercase
+          display: flex
+          flex:
+            direction: column
+            wrap: wrap
+          gap: 50px
+          .socNets
+            display: flex
+            justify:
+              content: center
+            flex:
+              direction: row
+            gap: 8px
+            .socOf
+              width: 20px
+              height: 20px
+              transition: all 0.5s 
+              img
+                @extend .socOf
+                @extend %darkToWhite
+              &:hover, &:focus
+                filter: brightness(1000%) grayscale(100%) opacity(0.1) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b)
+          .small-title
+            font:
+              size: 17px
+              weight: 500
+            letter-spacing: 4px
+      &.active
+        opacity: 1
+
+  .carousel-indicators
+    display: flex
+    gap: 8px
+    padding:
+      bottom: 20px
+    li
+      width: 20px!important
+      height: 20px!important
+      border:
+        style: solid
+        width: 2px
+        radius: 50%
+        color: #fff
+      &.active
+        background:
+          color: #fb383b
+      cursor: pointer
+  
+@media (max-width: 600px)
+  .carousel
+    .carousel-caption
+      transform: scale(80%)
+    .carousel-indicators
+      transform: scale(80%)

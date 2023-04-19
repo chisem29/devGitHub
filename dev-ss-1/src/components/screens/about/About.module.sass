@@ -1,0 +1,123 @@
+
+@use "../../../styles/tools/SrcFromDtW" as helperModule
+
+$greyColor : #999
+$greyColor2 : #505050
+
+.container
+  @extend %noPadding
+  overflow: hidden
+  
+.generalAbout
+  .titleOf
+    h5
+      font:
+        size: 45px
+        weight: 600
+      letter-spacing: 2px
+      text:
+        shadow: 0 2px 2px #000
+      margin:
+        bottom: 0
+    small
+      letter-spacing: 4px
+      color: $greyColor
+      font:
+        size: 12px
+    text:
+      align: center
+  .aboutBoxWelcome
+    @extend %noPadding
+    margin: auto
+    h5
+      color: $greyColor2
+      font:
+        size: 25px
+    p
+      letter-spacing: 2px
+      font-size: 13px
+      color: $greyColor
+      line-height: 1.5rem
+  margin: auto
+  padding: 80px 0 80px 0
+  gap: 40px!important
+
+.moreInfoAbout
+  background: 
+    color: #f0f1f5
+  & > div
+    &:first-child
+      display: flex
+      flex:
+        direction: column
+      justify-content: center
+      width: 100%
+      align-items: center!important
+      & > div
+        width: 80%
+      overflow: hidden
+    &
+      height: 400px
+    &:last-child
+      position: relative
+      .proggresBarInfo
+        overflow: hidden
+        height: 100%
+        position: relative
+        display: flex
+        flex:
+          direction: column
+        justify-content: center
+        padding:
+          left: 5%
+          right: 5%
+        img
+          width: 100%
+          height: 100%
+          position: absolute
+          top: 0
+          left: 0
+          z-index: 0
+        & > div
+          z-index: 1
+          position: relative
+          h5
+            color: #fff
+            text:
+              shadow: 0 0
+            margin-bottom: 20px
+          .listProgress
+            display: flex
+            flex:
+              direction: column
+            gap: 30px
+            & > div
+              & > div
+                &:first-child
+                  color: #fff
+                  font:
+                    size: 14px
+                    weight: 600
+                  text:
+                    transform: capitalize
+                  letter-spacing: 1.5px
+                &:last-child
+                  height: 10px!important
+                  & > div
+                    background: #000!important
+  h5
+    letter-spacing: 2px
+    text:
+      transform: capitalize
+      shadow: 0 1px 2px #000
+    font:
+      size: 30px
+.row
+  @extend %noGridColAndRow
+
+@media screen and (max-width: 768px)
+  .moreInfoAbout
+    & > div
+      &:first-child
+        padding: 10px
+        height: auto

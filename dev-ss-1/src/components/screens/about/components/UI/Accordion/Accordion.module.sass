@@ -1,0 +1,36 @@
+@use "../../../../../../styles/tools/SrcFromDtW" as moduleHelper
+  
+.accordionInfo
+  position: relative
+  width: 100%
+  min-width: 300px
+  word-wrap: break-word
+  
+.card
+  border: 1px solid #ddd
+  div
+    margin: 0
+    &.cardHeader
+      background-color: #000!important
+      padding: 0.2em
+      border-radius: 0
+    &:last-child
+      font:
+        size: 13px
+      letter-spacing: 2px
+      line-height: 1.5rem
+      color: #414141
+  h5
+    button
+      color: #fff!important
+      text:
+        decoration: none!important
+      cursor: pointer
+      font:
+        size: 14px!important
+        weight: 600!important
+      img
+        @include moduleHelper.methodFDTW
+        margin:
+          right: 1em
+        width: 12px

@@ -1,0 +1,30 @@
+.Nav
+  display: flex
+  flex:
+    direction: row
+    wrap: wrap
+  gap: 8px
+  position: fixed
+  z-index: 1
+  right: 5%
+  &.offsetDown
+    position: relative
+    right: 0
+  transition: right 0.1s
+
+.NavAt
+  img
+    width: 22px
+    height: 22px
+    filter: brightness(0) invert(1)
+    &::selection
+      background: none
+  background:
+    color: #1b191945
+  padding: 4px 6px
+  border: 1px solid #1b191945
+  cursor: pointer
+  max-height: 34px
+  max-width: 34px
+  
+    

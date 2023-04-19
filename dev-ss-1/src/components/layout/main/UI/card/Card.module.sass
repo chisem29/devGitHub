@@ -1,0 +1,90 @@
+@use "../../../../../styles/tools/SrcFromDtW" as helperModule
+  
+.card
+  position: relative
+  & > div
+    position: relative
+    &:first-child
+      height: 80%
+      img
+        height: 70%
+        justify-self: center
+        margin: 
+          top: 2rem
+      button:nth-child(2)
+        color: #fff
+        &.red
+          background: #fb383b
+        &.blue
+          background: #219ff3 
+        &.yellow
+          background: #FFC107
+        width: 80px
+        height: 30px
+        font:
+          size: 13px
+        z-index: 1
+      h4
+        text:
+          transform: uppercase
+        font:
+          size: 15px
+          weight: 700
+        justify-self: end
+        position: absolute
+        bottom: 0
+      div
+        position: absolute
+        z-index: 1
+        transition: all 0.5s
+        display: flex
+        height: 0
+        opacity: 1
+        width: 100%
+        justify-content: center
+        align-items: center
+        button
+          background: #000
+          color: #fff
+          text:
+            transform: uppercase
+          font:
+            size: 14px
+          width: 160px
+          opacity: 0
+          height: 0
+          transition: opacity 0.5s, background 0.5s
+          &:hover, &:active
+            background: #fb383b
+      &:hover
+        div
+          height: 100%
+          button
+            opacity: 1
+            height: 35px
+    &:nth-child(2)
+      &:last-child
+        button
+          background: #000
+          height: 40px
+          flex-basis: 40px
+          transition: background 0.4s
+          &:hover, &:active
+            background: #fb383b
+          img
+            height: 55%
+            width: 70%
+            @include helperModule.methodFDTW
+      & > div
+        &:first-child
+          & > div
+            &:last-child
+              gap: 4px
+              img
+                height: 12px
+                width: 12px
+              a
+                transition: all 0.2s
+                cursor: pointer
+                &:hover, &:focus
+                  filter: brightness(1000%) grayscale(100%) opacity(0.1) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b) drop-shadow(0 0 0 #fb383b)
