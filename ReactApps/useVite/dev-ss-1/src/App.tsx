@@ -19,7 +19,6 @@ import Contact from './components/screens/contact/Contact'
 import Single from './components/screens/single/Single'
 
 const App : FC = () => {
-
   return (
     <RouterProvider
       router={
@@ -57,7 +56,6 @@ const App : FC = () => {
       }
     />
   )
-
 }
 
 export default App
