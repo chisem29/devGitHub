@@ -13,7 +13,7 @@ import Layout from './components/layout/Layout'
  
 import Home from './components/screens/home/Home'
 import About from './components/screens/about/About'
-import Error from './components/screens/error/Error'
+import Error from './components/screens/home/error/Error'
 import ShopNow from './components/screens/shop&now/ShopNow'
 import Contact from './components/screens/contact/Contact'
 import Single from './components/screens/single/Single'

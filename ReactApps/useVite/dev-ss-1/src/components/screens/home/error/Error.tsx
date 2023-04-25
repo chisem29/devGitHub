@@ -6,7 +6,7 @@ import {
 
 import styles from "./Error.module.sass"
 import { useNavigate } from "react-router-dom"
-import SocNets from "../../UI/socNets/SocNets"
+import SocNets from "../../../UI/socNets/SocNets"
 
 interface bodyOf {
   children? : ReactNode
