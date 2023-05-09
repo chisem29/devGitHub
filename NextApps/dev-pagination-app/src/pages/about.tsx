@@ -1,11 +1,17 @@
+
 import { NextPage } from "next"
 
+import About from "@/components/screens/About/About"
+import Layout from "@/components/layout/Layout"
+
 const AboutPage : NextPage = () => {
+
   return (
-    <div>
-      <h1>About</h1>
-    </div>
+    <Layout>
+      <About />
+    </Layout>
   )
+
 }
 
 export default AboutPage
