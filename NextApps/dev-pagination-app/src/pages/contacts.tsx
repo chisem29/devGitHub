@@ -1,7 +1,8 @@
 import { NextPage } from "next"
+import dynamicLoader from "./helpers/dynamicLoader"
 
-import Contacts from "@/components/screens/Contacts/Contacts"
-import Layout from "@/components/layout/Layout"
+const Layout = dynamicLoader({ path : import("@/components/layout/Layout")}) as any
+const Contacts = dynamicLoader({ path : import("@/components/screens/Contacts/Contacts")}) as any 
 
 const ContactsPage : NextPage = () => {
 

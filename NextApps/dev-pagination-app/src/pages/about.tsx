@@ -1,8 +1,9 @@
 
 import { NextPage } from "next"
+import dynamicLoader from "./helpers/dynamicLoader"
 
-import About from "@/components/screens/About/About"
-import Layout from "@/components/layout/Layout"
+const About = dynamicLoader({ path : import("@/components/screens/About/About") }) as any
+const Layout = dynamicLoader({ path : import("@/components/layout/Layout") }) as any
 
 const AboutPage : NextPage = () => {
 
