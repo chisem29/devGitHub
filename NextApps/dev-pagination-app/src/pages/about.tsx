@@ -1,15 +1,38 @@
 
-import { NextPage } from "next"
-import dynamicLoader from "./helpers/dynamicLoader"
+import { GetServerSideProps, NextPage } from "next"
+import dynamic from "next/dynamic"
+import layoutLoader from "./helpers/dynamic/layoutLoader"
+import services from "@/services/index.service"
+import userBody from "@/shared/interfaces/user"
 
-const About = dynamicLoader({ path : import("@/components/screens/About/About") }) as any
-const Layout = dynamicLoader({ path : import("@/components/layout/Layout") }) as any
+const About = dynamic(() => import("@/components/screens/About/About"))
+const Layout = layoutLoader
 
-const AboutPage : NextPage = () => {
+export const getServerSideProps : GetServerSideProps = async ({req, res}) => {
+
+  const user = await services.getUser()
+
+  if (!user) {
+    return {
+      redirect : {
+        destination : "/about",
+        permanent : false
+      }
+    }
+  }
+
+  return {
+    props : {
+      user
+    }
+  }
+}
+
+const AboutPage : NextPage<{ user : userBody }> = ({user}) => {
 
   return (
     <Layout>
-      <About />
+      <About user={user}/>
     </Layout>
   )
 

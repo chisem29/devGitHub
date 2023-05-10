@@ -1,6 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import cards from "@/data/cards.json"
-import cardsBody from '@/shared/interfaces/cards'
 import { NextResponse } from 'next/server';
 
 export const config = {

@@ -4,10 +4,11 @@ import { NextPage, GetServerSideProps } from "next"
 import services from "@/services/index.service"
 import cardsBody from "@/shared/interfaces/cards"
 
-import dynamicLoader from "../pages/helpers/dynamicLoader"
+import dynamic from "next/dynamic"
+import layoutLoader from "./helpers/dynamic/layoutLoader"
 
-const Layout = dynamicLoader({ path : import("@/components/layout/Layout"), ssr : true}) as any
-const Home = dynamicLoader({ path : import("@/components/screens/Home/Home"), ssr : true}) as any
+const Layout = layoutLoader
+const Home = dynamic(() => import("@/components/screens/Home/Home"), {})
 
 export const getServerSideProps : GetServerSideProps = async () => {
 
