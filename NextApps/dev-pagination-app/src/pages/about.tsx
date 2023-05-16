@@ -8,15 +8,16 @@ import userBody from "@/shared/interfaces/user"
 const About = dynamic(() => import("@/components/screens/About/About"))
 const Layout = layoutLoader
 
-export const getServerSideProps : GetServerSideProps = async ({req, res}) => {
 
-  const user = await services.getUser()
+export const getServerSideProps : GetServerSideProps = async ({ query } ) => {
 
-  if (!user) {
+  const user = query
+
+  if ((!user)) {
     return {
       redirect : {
         destination : "/about",
-        permanent : false
+        permanent : true
       }
     }
   }
@@ -28,7 +29,7 @@ export const getServerSideProps : GetServerSideProps = async ({req, res}) => {
   }
 }
 
-const AboutPage : NextPage<{ user : userBody }> = ({user}) => {
+const AboutPage : NextPage<{ user : userBody }> = ({ user }) => {
 
   return (
     <Layout>

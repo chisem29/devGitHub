@@ -1,5 +1,5 @@
 
-import { NextPage, GetServerSideProps } from "next"
+import { NextPage, GetStaticProps } from "next"
 
 import services from "@/services/index.service"
 import cardsBody from "@/shared/interfaces/cards"
@@ -10,7 +10,7 @@ import layoutLoader from "./helpers/dynamic/layoutLoader"
 const Layout = layoutLoader
 const Home = dynamic(() => import("@/components/screens/Home/Home"), {})
 
-export const getServerSideProps : GetServerSideProps = async () => {
+export const getStaticProps : GetStaticProps = async () => {
 
   const data = await services.getAllCards()
 

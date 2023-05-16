@@ -12,11 +12,11 @@ export default {
 
     return data
   },
-  async getUser() {
+  async getUser({ name, password } : userBody) {
 
-    const { data } = await axios<userBody>({ method : "POST", url : "api/auth"})
+    const { config : {params} } = await axios<userBody>({ method : "GET", url : "/about", params : { name, password }})
 
-    return data
+    return params
 
   }
 }
