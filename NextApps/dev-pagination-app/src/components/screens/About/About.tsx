@@ -4,7 +4,6 @@ import styles from "./About.module.sass"
 import services from "@/services/index.service"
 import userBody from "@/shared/interfaces/user"
 import { useMutation } from "react-query"
-import { useRouter } from "next/router"
 
 const About : FC<{user : userBody}> = ({ user }) => {
 
@@ -51,6 +50,8 @@ const About : FC<{user : userBody}> = ({ user }) => {
                       className="
                         text-slate-950 outline-0 h-[30px] bg-slate-100 sm:basis-[200px] w-[90%]
                       "
+                      minLength={8}
+                      maxLength={16}
                       id={`fda${name}`}
                       name={name}
                       type={name == "name" ? "text" : "password"}

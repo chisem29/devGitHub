@@ -4,8 +4,6 @@ import styles from "./Header.module.sass"
 import { FC } from "react"
 
 import { usePathname } from 'next/navigation';
-import Image from "next/image";
-import img from "../../../../public/favicon.ico"
 
 const Header : FC = () => {
 
@@ -52,7 +50,7 @@ const Header : FC = () => {
                   path : "feature"
                 },
                 {
-                  path : "contacts"
+                  path : "supports"
                 }
               ].map(({ path }) => 
                 <Link
@@ -64,7 +62,10 @@ const Header : FC = () => {
                     font-semibold 
                     uppercase 
                     text-sm
-                    ${pathname.includes(path) ? ' text-red-900 underline underline-offset-8' : ''}
+                    ${pathname.includes(path) ? 
+                      ' text-red-900 underline underline-offset-8' : 
+                      ''
+                    }
                   `}
                   href={`/${path}`}>
                   {path}

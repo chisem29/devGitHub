@@ -1,17 +1,17 @@
 import { NextPage } from "next"
 import dynamic from "next/dynamic"
 
-import layoutLoader from "./helpers/dynamic/layoutLoader"
+import layoutLoader from "../helpers/dynamic/layoutLoader"
 
 const Layout = layoutLoader
-const Contacts = dynamic(() => import("@/components/screens/Contacts/Contacts"))
+const Supports = dynamic(() => import("@/components/screens/Supports/Supports"))
 
 
 const ContactsPage : NextPage = () => {
 
   return (
     <Layout>
-      <Contacts />
+      <Supports />
     </Layout>
   )
 
