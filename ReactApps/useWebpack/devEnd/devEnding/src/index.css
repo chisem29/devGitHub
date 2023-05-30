@@ -1,0 +1,24 @@
+
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-transparent: #00000000;
+}
+
+body, html {
+  border: 0;
+  margin: 0;
+  height: 100vh;
+  min-height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#wrapper {
+  height: 100%;
+  width: 100%
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-block-start: 0;
+  letter-spacing: 1.2px;
+}
