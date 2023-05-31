@@ -23,7 +23,8 @@
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^8.0.5"
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.11.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.2",
@@ -35,12 +36,14 @@
     "@types/webpack": "^5.28.1",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
+    "babel-plugin-module-resolver": "^5.0.0",
     "css-loader": "^6.7.4",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^6.0.1",
     "html-webpack-plugin": "^5.5.1",
     "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^2.7.6",
+    "module-resolver": "^1.0.0",
     "postcss": "^8.4.23",
     "postcss-loader": "^7.3.0",
     "postcss-preset-env": "^8.4.1",
@@ -52,5 +55,5 @@
     "webpack-cli": "^5.1.1",
     "webpack-dev-server": "^4.15.0"
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3001/"
 }

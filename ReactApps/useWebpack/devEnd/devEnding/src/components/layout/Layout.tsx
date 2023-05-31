@@ -1,37 +1,50 @@
-import React, { FC, useEffect, } from "react"
+import React, { FC, PropsWithChildren  } from "react"
 
-import { 
-  useGetContactByIdQuery, 
-  useGetContactsQuery 
-} from "../../store/services/api"
+import Main from "./main/Main"
+import Header from "./header/Header"
+import Footer from "./footer/Footer"
 
-const Layout : FC = () => {
+import styles from "./Layout.module.css"
 
-  const { 
-    refetch, 
-    data, 
-    isLoading, 
-    isError, 
-    isSuccess,
-  } = useGetContactsQuery(undefined)
-
-  useEffect(() => {
-    refetch()
-  }, [data])
-
-  console.log(data)
+const Layout : FC<PropsWithChildren> = ({
+  children
+}) => {
 
   return (
-    <div>
-      <h1>LAYOUT</h1>
-      <h3>{isError && "Error! Something went wrong..."}</h3>
-      <h3>{isLoading && "Loading..."}</h3>
-      <h3>{isSuccess && "Success!! Data has loaded!"}</h3>
-      <button
-        type="button"
-        onClick={() => { refetch() }}>
-        refetch
-      </button>
+    <div
+      className={`
+        ${styles.layout} 
+        container-fluid
+        d-flex
+        flex-column
+        justify-content-between
+      `}>
+      <div className="row">
+        <div className="col-12">
+          <header
+            className={`${styles.header}`}>
+            <Header />
+          </header> 
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12">
+          <main
+            className={`${styles.main}`}>
+            <Main>
+              {children}
+            </Main>
+          </main>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-12">
+          <footer
+            className={`${styles.footer}`}>
+            <Footer />
+          </footer>
+        </div>
+      </div>
     </div>
   )
 }

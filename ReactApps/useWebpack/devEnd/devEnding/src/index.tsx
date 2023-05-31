@@ -1,12 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { RouterProvider } from "react-router-dom"
+
+import browserRouter from './browserRouter'
 
 import "./index.css"
 
-import App from './app'
-
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider 
+      router={browserRouter}/>
   </React.StrictMode>, 
-  document.querySelector('#wrapper'))
+  document.querySelector('#wrapper')
+)

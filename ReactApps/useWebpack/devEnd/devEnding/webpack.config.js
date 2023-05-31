@@ -7,7 +7,7 @@ const path = require('path')
 module.exports = {
   mode : 'none',
   entry : {
-    app : path.join(__dirname, 'src', 'index.tsx')
+    app : path.join(__dirname, './src/index.tsx')
   },
   target : 'web',
   resolve : {
@@ -64,7 +64,7 @@ module.exports = {
       template : path.join(__dirname, 'src', 'index.html'),
       filename : 'index.html',
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
   ],
   output : {
     filename : 'bundle.js',

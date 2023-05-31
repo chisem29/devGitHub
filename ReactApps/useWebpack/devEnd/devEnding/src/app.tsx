@@ -1,7 +1,8 @@
 import React, { FC } from "react"
-import { Provider } from "react-redux"
+import { Provider } from 'react-redux'
+import { Outlet } from "react-router-dom"
 
-import store from "./store/index"
+import store from './store/index'
 import Layout from "./components/layout/Layout"
 
 import "./app.css"
@@ -11,9 +12,11 @@ const App : FC = () => {
     <>
       <Provider
         store={store}>
-        <div
+        <div 
           className="app">
-          <Layout />
+          <Layout>
+            <Outlet />
+          </Layout>
         </div>
       </Provider>
     </>

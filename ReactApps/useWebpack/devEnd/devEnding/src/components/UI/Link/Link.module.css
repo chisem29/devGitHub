@@ -1,0 +1,29 @@
+.link {
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.1s all ease;
+  letter-spacing: 1.2px;
+  position: relative;
+}
+
+.link:is(:hover, :active) {
+  color: #000;
+  text-shadow: 7px 2px 1px #c9c3c3;
+}
+
+.link::before, .link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+}
+
+.link:is(:hover, :active)::before,
+  .link:is(:hover, :active)::after{
+  width: 100%
+}

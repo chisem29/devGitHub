@@ -10,6 +10,7 @@ body, html {
   margin: 0;
   height: 100vh;
   min-height: 100%;
+  width: 100vw;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
