@@ -49,6 +49,8 @@ module.exports = {
                     "postcss-preset-env",
                     {
                       // Options
+                      modules : true,
+                      sourceMap : true
                     },
                   ],
                 ],
