@@ -1,4 +1,7 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
+import { 
+  createApi, 
+  fetchBaseQuery 
+} from "@reduxjs/toolkit/query/react"
 
 import contactBody from "../../shared/interfaces/contact"
 
@@ -21,5 +24,8 @@ export const api = createApi({
   })
 })
 
-export const { useLazyGetContactByIdQuery, useLazyGetContactsQuery } = api
+export const { 
+  useGetContactByIdQuery, 
+  useLazyGetContactsQuery 
+} = api
 

@@ -10,6 +10,7 @@ import App from "./app"
 
 import Contacts from "./pages/contacts/Contacts"
 import Home from "./pages/home/Home"
+import Error from "./pages/error/error"
 
 const browserRouter = createBrowserRouter(
   createRoutesFromChildren(
@@ -17,17 +18,17 @@ const browserRouter = createBrowserRouter(
       element={<App />}>
       <Route
         element={<Home />}
-        index/>
+        index />
       <Route
         path="contacts"
-        element={<Contacts />}/>
+        element={<Contacts />} />
       <Route
         path="contacts/:id"
-        element={<> contact by id </>}
+        element={<>sdsdsad</>}
       />
       <Route
-        path="web"
-        element={<> sdacontact by id </>}
+        path="*" 
+        element={<Error />}
       />
     </Route>
   )
