@@ -4,7 +4,7 @@ import Link from "react-router-dom"
 
 import styles from "./Header.module.css"
 
-import LinkCustom from "../../UI/Link/Link"
+import LinkCustom from "../../UI/link/Link"
 
 const Header : FC = () => {
   return (

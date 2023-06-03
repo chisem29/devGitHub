@@ -9,7 +9,7 @@ export const api = createApi({
   reducerPath : "api",
   baseQuery : fetchBaseQuery({ 
     baseUrl : "http://localhost:3001/", 
-    mode : "no-cors",
+    mode : "no-cors"
   }),
   endpoints : build => ({
     getContactById : build.query<contactBody, number>({
@@ -18,14 +18,11 @@ export const api = createApi({
         method : "GET", 
       }),
     }),
-    getContacts : build.query<Array<contactBody>, undefined>({
-      query : () => `contacts`
+    getContacts : build.query<Array<contactBody>, any>({
+      query : () => `contacts`,
     })
   })
 })
 
-export const { 
-  useGetContactByIdQuery, 
-  useLazyGetContactsQuery 
-} = api
-
+export const useGetContactByIdQuery = api.endpoints.getContactById.useQuery
+export const useLazyGetContactsQuery = api.endpoints.getContacts.useLazyQuery

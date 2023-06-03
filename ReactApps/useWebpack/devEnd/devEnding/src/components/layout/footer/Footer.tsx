@@ -1,9 +1,18 @@
 import React, { FC } from "react"
 
+import styles from "./Footer.module.css"
+
 const Footer : FC = () => {
   return (
     <>
-      Footer
+      <div
+        className={`
+          ${styles.container} 
+          d-flex 
+          justify-content-center
+        `}>
+        Footer
+      </div>
     </>
   )
 }

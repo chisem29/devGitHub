@@ -1,8 +1,13 @@
-import React, { FC, useEffect } from "react"
+import React, 
+{ 
+  FC, 
+  useEffect 
+} from "react"
 
 import styles from "./Contacts.module.css"
 
 import { useLazyGetContactsQuery } from "../../store/services/api"
+import HandlerStatus from "../../components/UI/handlerStatus/HandlerStatus"
 
 const Contacts : FC = () => {
 
@@ -18,16 +23,16 @@ const Contacts : FC = () => {
 
   useEffect(() => {
     refetch(undefined)
+    console.log(contacts)
   }, [contacts])
 
   return (
     <>
-      <div
-        className={styles.contacts}>
-        {isError && <h4> Something went wrong!</h4>}
-        {isLoading && <h4> Loading...</h4>}
-        {isSuccess && <h4> Successfully!</h4>}
-      </div>
+      <HandlerStatus
+        isError={isError}
+        isSuccess={isSuccess}
+        isLoading={isLoading}
+      />
     </>
   )
 }

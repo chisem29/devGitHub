@@ -2,7 +2,7 @@ import React from "react"
 
 import { 
   createBrowserRouter, 
-  createRoutesFromChildren,
+  createRoutesFromElements,
   Route
 } from "react-router-dom"
 
@@ -10,10 +10,11 @@ import App from "./app"
 
 import Contacts from "./pages/contacts/Contacts"
 import Home from "./pages/home/Home"
-import Error from "./pages/error/error"
+import Error from "./pages/error/Error"
+import Contact from "./pages/contact/Contact"
 
 const browserRouter = createBrowserRouter(
-  createRoutesFromChildren(
+  createRoutesFromElements(
     <Route
       element={<App />}>
       <Route
@@ -22,14 +23,12 @@ const browserRouter = createBrowserRouter(
       <Route
         path="contacts"
         element={<Contacts />} />
-      <Route
-        path="contacts/:id"
-        element={<>sdsdsad</>}
-      />
+      <Route 
+        element={<Contact />}
+        path="contacts/:id" />
       <Route
         path="*" 
-        element={<Error />}
-      />
+        element={<Error />} />
     </Route>
   )
 )
