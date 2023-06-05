@@ -1,8 +1,4 @@
-import React, 
-{ 
-  FC, 
-  useEffect 
-} from "react"
+import React, { FC } from "react"
 
 import { useParams } from "react-router-dom"
 
@@ -12,7 +8,7 @@ import HandlerStatus from "../../components/UI/handlerStatus/HandlerStatus"
 const Contact : FC = () => {
 
   const { id } = useParams()
-  
+
   const {
     refetch,
     isError,

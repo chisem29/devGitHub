@@ -9,6 +9,7 @@ import styles from "./Contacts.module.css"
 import { useLazyGetContactsQuery } from "../../store/services/api"
 
 import HandlerStatus from "../../components/UI/handlerStatus/HandlerStatus"
+import { Outlet } from "react-router-dom"
 
 const Contacts : FC = () => {
 
@@ -34,6 +35,7 @@ const Contacts : FC = () => {
         isSuccess={isSuccess}
         isLoading={isLoading}
       />
+      <Outlet />
     </>
   )
 }

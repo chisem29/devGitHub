@@ -5,9 +5,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const path = require('path')
 
 module.exports = {
-  mode : 'none',
+  mode : 'production',
   entry : {
-    app : path.join(__dirname, './src/index.tsx')
+    app : [
+      'url-search-params-polyfill',
+      path.join(__dirname, './src/index.tsx')
+    ]
   },
   target : 'web',
   resolve : {

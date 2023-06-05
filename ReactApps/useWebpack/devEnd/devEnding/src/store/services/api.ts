@@ -11,14 +11,14 @@ export const api = createApi({
     baseUrl : "http://localhost:3001/", 
     mode : "no-cors"
   }),
-  endpoints : build => ({
-    getContactById : build.query<contactBody, number>({
+  endpoints : ({ query }) => ({
+    getContactById : query<contactBody, number>({
       query : id => ({ 
         url : `contacts/${id}`, 
         method : "GET", 
       }),
     }),
-    getContacts : build.query<Array<contactBody>, any>({
+    getContacts : query<Array<contactBody>, any>({
       query : () => `contacts`,
     })
   })

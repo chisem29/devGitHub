@@ -3,6 +3,9 @@
   --color-white: #fff;
   --color-black: #000;
   --color-transparent: #00000000;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
 
 body, html {

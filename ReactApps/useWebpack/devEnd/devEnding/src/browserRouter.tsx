@@ -16,16 +16,18 @@ import Contact from "./pages/contact/Contact"
 const browserRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route
+      path="/"
       element={<App />}>
       <Route
         element={<Home />}
         index />
       <Route
         path="contacts"
-        element={<Contacts />} />
-      <Route 
-        element={<Contact />}
-        path="contacts/:id" />
+        element={<Contacts />}>
+        <Route 
+          element={<Contact />}
+          path=":id" />
+      </Route>
       <Route
         path="*" 
         element={<Error />} />

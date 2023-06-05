@@ -13,13 +13,13 @@ const useScrollOffset = () => {
   useEffect(() => {
 
     const handleScroll = () => {
-      const position = [window.pageXOffset, window.pageYOffset]
+      const position = [window.screenX, window.screenY]
       setScrollPosition(position)
     }
 
     window.addEventListener('scroll', handleScroll, { passive : true })
     return () => {
-        window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll', handleScroll)
     }
 
   }, [])
