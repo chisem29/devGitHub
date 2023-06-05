@@ -8,7 +8,7 @@ const PORT = 3001
 const app = express()
 
 app
-  .use("/", routerContacts)
   .use(express.json())
   .use(cors())
+  .use(routerContacts)
   .listen(PORT, () => { console.log(`server started on port ${PORT}`) })
