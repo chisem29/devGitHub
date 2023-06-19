@@ -1,0 +1,26 @@
+.onNavBox
+  width: 200px
+  background: #000000f1
+  left: -200px
+  top: 0
+  z-index: 100
+  transition: left 1s ease
+
+.onNavBox.activeNav
+  left: 0
+
+.onNavBox, .darkBack
+  min-height: 100vh
+  height: 100%
+  position: fixed
+  top: 0
+
+.darkBack
+  width: 100vw
+  background: #00000073
+  z-index: 11
+  left: 0
+
+
+.closeButton
+  filter: brightness(0) invert(1)

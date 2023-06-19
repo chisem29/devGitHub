@@ -1,0 +1,20 @@
+
+.infoContain
+  z-index: 2
+  
+.imgBg
+  z-index: 1
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  &::after
+    content: ''
+    background: url(https://img.icons8.com/?size=512&id=GjoWIozcuKYe&format=png)
+    background-size: contain
+    width: 110%
+    height: 115%
+    position: absolute
+    z-index: -1
+    filter: brightness(0) invert(1) opacity(0.2) drop-shadow(0 0 0#407fbb) drop-shadow(0 0 0#407fbb)
+  

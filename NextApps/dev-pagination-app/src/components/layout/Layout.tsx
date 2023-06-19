@@ -12,7 +12,15 @@ const inter = Inter({ subsets: ['latin'] })
 const Layout : FC<PropsWithChildren> = ({ children }) => {
   return (
     <div
-      className={`flex min-h-screen justify-between flex-col items-center p-24 gap-y-8 ${inter.className}`}>
+      className={`
+        layout
+        relative 
+        min-h-screen
+        flex
+        flex-col
+        ${styles.container} 
+        ${inter.className}
+      `}>
       <Header />
       <Main>
         {children}

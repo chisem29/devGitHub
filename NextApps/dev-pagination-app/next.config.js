@@ -6,9 +6,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
-  experimental: {
-    typedRoutes: true,
-  },
+  images: {
+    domains: ['https://capp.nicepage.com'],
+},
 }
 
 module.exports = nextConfig

@@ -1,65 +1,69 @@
-import { useQuery } from 'react-query'
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 
-import { Noto_Sans_SC } from "next/font/google"
+import { Ubuntu } from "next/font/google"
 
-import styles from "./Home.module.css"
-import services from "@/services/index.service"
+import styles from "./Home.module.sass"
+import SocNets from '@/components/UI/SocNets/SocNets'
 
-import Card from '@/components/UI/Card/Card'
-import cardsBody from '@/shared/interfaces/cards'
+const LegendFont = Ubuntu({ weight : "700", subsets : [] })
 
-const NS = Noto_Sans_SC({ weight :  "400", preload : false })
-
-const Home : FC<cardsBody<string>> = ({ cards }) => {
-  
-  const {
-    data:cardsBeta, 
-  } = useQuery({
-    queryKey : ["cards"],
-    queryFn : () => services.getAllCards(),
-    select : ({ cards }) => cards,
-    initialData : { cards },
-  })
+const Home : FC = () => {
 
   return (
     <div 
-      className="
+      className={`
+        relative
         flex
-        flex-col
-        items-center 
-        gap-y-4
-        min-w-full
-      ">
-      <div>
-        <h1
-          className={`text-2xl ${NS.className}`}>
-          Cards
-        </h1>
-      </div>
+        justify-center
+        lg:items-end
+        lg:pb-20
+        max-lg:items-center
+        ${styles.container}
+      `}>
       <div
-        className="
-          font-mono 
-          text-sm 
-          flex 
-          min-w-full
-          justify-center
-          items-center
-          gap-x-5
-          gap-y-6 
-          sm:flex-row 
-          max-sm:flex-col
-        ">
-        {
-          cardsBeta?.map(({
-            title,
-            description
-          }, index) => 
-            <Card 
-              {...{title, description, index}}
-            />
-          )
-        }
+        className={`
+          z-10
+          flex gap-x-32
+          w-full
+          lg:justify-center
+          max-lg:flex-col
+          max-lg:gap-y-4
+          max-lg:gap-x-0
+          max-lg:px-20
+          max-xs:items-center
+        `}>
+        <h1
+          className={`
+            ${LegendFont.className} 
+            font-serif 
+            text-5xl 
+            text-[#fff]
+            lg:basis-[350px]
+          `}>
+          A BREATH OF FRESH AIR
+        </h1>
+        <div
+          className={`
+            ${LegendFont.className} 
+            font-serif 
+            text-[#fff]
+            lg:basis-[375px]
+            text-[13px]
+            tracking-[.1em]
+            leading-5
+            max-lg:max-w-lg
+            flex flex-col
+          `}>
+          <p>
+            SAMPLE TEXT. LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT NULLAM NUNC JUSTO SAGITTIS SUSCIPIT ULTRICES.
+          </p>
+          <br />
+          <p
+            className="mb-2">
+            IMAGE FROM <a className="underline" href="#">FREEPIK</a>
+          </p>
+          <SocNets />
+        </div>
       </div>
     </div>
   )

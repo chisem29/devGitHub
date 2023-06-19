@@ -47,18 +47,18 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%
 }
 
-#box-content img {
+#box-content > img {
   border-radius: 10px;
   overflow-y: visible;
   width: max(55%, 400px);
-  height: 350px;
+  height: 375px;
 }
 
 .container-sections {
   display: flex;
   justify-content: center;
   gap: 20px;
-  transform: translateY(-100px);
+  transform: translateY(-60px);
 }
 
 .card {
@@ -69,7 +69,26 @@ h1, h2, h3, h4, h5, h6 {
   gap: 12px;
   text-align: center;
   min-height: 300px;
-  padding: 0 8px
+  padding: 0 8px;
+  position: relative;
+}
+
+.card #leg-img {
+  position: absolute; 
+  top: -20px;
+  height: 60px;
+  border-radius: 8px;
+  width: 60px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card #leg-img img {
+  width: 45px;
+  height: 45px;
+  filter: brightness(0) invert(1);
 }
 
 .card h5 {

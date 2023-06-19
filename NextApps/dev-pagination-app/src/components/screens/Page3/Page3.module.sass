@@ -1,0 +1,17 @@
+
+.containContent
+  &::before
+    content: ''
+    position: absolute
+    width: 70%
+    height: 70%
+    background: repeating-linear-gradient(-45deg,#22222200,#22222200 10px,#273755 4px,#273755 15px)
+    right: -50px
+    z-index: 0
+    top: -50px
+    @media screen and (max-width : 992px)
+      width: 90%
+    @media screen and (max-width : 768px)
+      width: calc(100% + 50px)
+      left: 0
+      height: 85%

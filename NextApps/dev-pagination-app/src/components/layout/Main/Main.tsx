@@ -1,11 +1,16 @@
-import { FC, ReactNode } from "react"
+import { FC, PropsWithChildren } from "react"
 
 import styles from "./Main.module.sass"
 
-const Main : FC<{children? : ReactNode}> = ({children}) => {
+const Main : FC<PropsWithChildren> = ({ children }) => {
   return (
     <main
-      className={`w-full flex justify-center ${styles.container}`}>
+      className={`
+        w-full 
+        relative 
+        h-full
+        ${styles.container}
+      `}>
       {children}
     </main>
   )

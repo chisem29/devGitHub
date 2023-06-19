@@ -1,0 +1,19 @@
+
+.inputGroup
+  input, textarea
+    position: relative
+    &:is(:focus-visible, :focus)
+      outline: 0
+    &::placeholder
+      font-size: 13px
+      padding-left: 10px
+      color: #a1a1a1
+    border-bottom: 1px solid #000
+    &:is(input)
+      flex-basis: 40px
+    &:is(textarea)
+      min-height: 100px
+
+.iconInner
+  filter: brightness(0) invert(1)
+  max-width: 25px
