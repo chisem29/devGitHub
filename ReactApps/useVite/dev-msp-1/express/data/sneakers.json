@@ -1,5 +1,4 @@
-{
-  "sneakers" : [
+[
     {
       "name" : "Adidas gazelle",
       "src" : ["https://avatars.mds.yandex.net/i?id=85dc27e19ff4a1aef249b0b978c8c3ce1449591e-9101109-images-thumbs&n=13"],
@@ -49,5 +48,4 @@
       "src" : ["https://avatars.mds.yandex.net/i?id=83cceeab6e836dd84ec6d9035e69732cb736ae75-7942200-images-thumbs&n=13"],
       "price" : 170
     }
-  ]
-}
+]

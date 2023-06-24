@@ -1,18 +1,15 @@
 
 import { 
-  FC, 
-  ReactNode 
+  FC, PropsWithChildren, 
 } from "react"
 
-import styles from "./Error.module.sass"
 import { useNavigate } from "react-router-dom"
+
+import styles from "./Error.module.sass"
+
 import SocNets from "../../../UI/socNets/SocNets"
 
-interface bodyOf {
-  children? : ReactNode
-}
-
-const Error : FC<bodyOf> = () => {
+const Error : FC<PropsWithChildren> = () => {
 
   const navigate = useNavigate()
 

@@ -5,7 +5,7 @@ import {
 
 import styles from "./Pils.module.sass" 
 
-const Pils : FC = () => {
+const Pils : FC<{ name : string }> = ({ name }) => {
 
   const [
     targetPill,
@@ -112,7 +112,7 @@ const Pils : FC = () => {
               },
               { content :
                 <>
-                  <h5>Shoe Rock Vision(SRV) Sneakers (Blue)</h5  >
+                  <h5>{name}</h5  >
                   <p
                     className='mt-4'>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.

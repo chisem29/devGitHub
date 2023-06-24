@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom"
 
 import styles from "./Single.module.sass"
 
-import { sneakers } from "../../../data/sneakers.json"
+import dataMethods from "../../../services/sneakers.service"
 
 import Card from "../../layout/main/UI/card/Card"
 import Pils from "./components/UI/pils/Pils"
@@ -16,10 +16,13 @@ import Accordion from "./components/UI/accordion/Accordion"
 import useWindowSize from "../../../hooks/useWindowSize"
 import sneaker from "../../../shared/interfaces/sneaker"
 import SocNets from "../../UI/socNets/SocNets"
+import useSetSneakers from "../../../hooks/useSetSneakers"
 
 const Single : FC = () => {
 
   const { id } = useParams()
+
+  const sneakersList = useSetSneakers(dataMethods.getSneakers())
 
   const [
     { 
@@ -28,7 +31,7 @@ const Single : FC = () => {
       name
     },
     setActiveSneaker
-  ] = useState<sneaker>((sneakers.find(({ name }) => name === id) as sneaker))
+  ] = useState<sneaker>({ src : [], price : 0, name : ""})
 
   const [
     targetIndex,
@@ -36,7 +39,8 @@ const Single : FC = () => {
   ] = useState<number>(0)
 
   useLayoutEffect(() => {
-    setActiveSneaker((sneakers.find(({ name }) => name === id) as sneaker))
+    dataMethods.getSneakerById(String(id))
+      .then((e) => setActiveSneaker(e))
   })
 
   const [
@@ -95,7 +99,7 @@ const Single : FC = () => {
                   className={`d-flex ${styles.starsAccess}`}>
                   {
                     [1, 2, 3, 4, 5]
-                      .map((elem) => 
+                      .map(() => 
                         <a
                           href="">
                           <img src="https://img.icons8.com/ios-filled/1x/filled-star.png"/>
@@ -103,8 +107,7 @@ const Single : FC = () => {
                       )
                   }
                 </div>
-                <button
-                  className={``}>
+                <button>
                   add to cart
                 </button>
                 <div
@@ -119,8 +122,8 @@ const Single : FC = () => {
               className={styles.infoOuter}>
               {
                 widthPage > 992 ?
-                <Pils /> :
-                <Accordion />
+                <Pils name={name}/> :
+                <Accordion name={name}/>
               }
             </div>
           </div>
@@ -135,7 +138,7 @@ const Single : FC = () => {
               <br />
               <div>
                 {
-                  sneakers.slice(0, 4)
+                  sneakersList.slice(0, 4)
                     .map(({
                       src,
                       price,

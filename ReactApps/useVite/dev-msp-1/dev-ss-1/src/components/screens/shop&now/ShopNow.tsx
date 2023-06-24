@@ -1,7 +1,7 @@
 
 import { 
   FC, 
-  ReactNode 
+  PropsWithChildren, 
 } from "react"
 
 import styles from "./Shop&Now.module.sass"
@@ -10,17 +10,14 @@ import Form from "../../layout/main/UI/form/Form"
 import RangePrice from "./components/UI/RangePrice/RangePrice"
 
 import refs from "../../../assets/Refs.json"
-import { useNavigate } from "react-router-dom"
 import Card from "../../layout/main/UI/card/Card"
-import { sneakers } from "../../../data/sneakers.json"
 
-interface bodyOf {
-  children? : ReactNode
-}
+import dataMethods from "../../../services/sneakers.service"
+import useSetSneakers from "../../../hooks/useSetSneakers"
 
-const ShopNow : FC<bodyOf> = () => {
+const ShopNow : FC<PropsWithChildren> = () => {
 
-  const navigate = useNavigate()
+  const sneakers = useSetSneakers(dataMethods.getSneakers())
 
   return (
     <div 

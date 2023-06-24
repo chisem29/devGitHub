@@ -1,7 +1,7 @@
 
 import { 
   FC, 
-  ReactNode 
+  PropsWithChildren, 
 } from "react"
 
 import styles from "./Home.module.sass"
@@ -10,11 +10,7 @@ import { useNavigate } from "react-router-dom"
 import Carousel from "../../layout/main/UI/carousel/Carousel"
 import Form from "../../layout/main/UI/form/Form"
 
-interface bodyOf {
-  children? : ReactNode
-}
-
-const Home : FC<bodyOf> = () => {
+const Home : FC<PropsWithChildren> = () => {
 
   const navigate = useNavigate()
 

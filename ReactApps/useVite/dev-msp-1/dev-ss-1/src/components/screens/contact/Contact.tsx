@@ -6,7 +6,7 @@ import {
 import styles from "./Contact.module.sass"
 
 
-const Contact : FC= () => {
+const Contact : FC = () => {
 
   return (
     <div

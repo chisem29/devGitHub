@@ -4,7 +4,7 @@ import {
 
 import styles from "./Accordion.module.sass"
 
-const Accordion : FC = () => {
+const Accordion : FC<{ name : string}> = ({ name }) => {
 
   const [
     targetIndex,
@@ -100,7 +100,7 @@ const Accordion : FC = () => {
               name : "information",
               content :
                 <>
-                  <h5>Shoe Rock Vision(SRV) Sneakers (Blue)</h5  >
+                  <h5>{name}</h5  >
                   <p
                     className='mt-4'>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor.Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.
