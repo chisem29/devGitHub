@@ -242,7 +242,8 @@ const ShopNow : FC<PropsWithChildren> = () => {
                   <div 
                     className={styles.boxProducts}>
                     {
-                      sneakers?.map(({ 
+                      sneakers ?
+                      sneakers.map(({ 
                         name, 
                         price,
                         src 
@@ -252,7 +253,7 @@ const ShopNow : FC<PropsWithChildren> = () => {
                           name={name}
                           src={src}
                           price={price} />
-                      )
+                      ) : <h1> Loading... </h1>
                     }
                   </div>
                   <br />

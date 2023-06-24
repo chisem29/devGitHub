@@ -138,6 +138,7 @@ const Single : FC = () => {
               <br />
               <div>
                 {
+                  sneakersList ? 
                   sneakersList.slice(0, 4)
                     .map(({
                       src,
@@ -150,7 +151,7 @@ const Single : FC = () => {
                         name={name}
                         index={index}
                       />
-                    )
+                    ) : <h3> Loading... </h3>
                 }
               </div>
             </div>
