@@ -47,6 +47,15 @@ import (
     make new panic print println real recover
 */
 
+type Bool struct { Bool bool }
+type Int = int
+
+type person struct {
+  name string
+  sex Bool
+  age int
+}
+
 func main() {
 
   /* 
@@ -110,8 +119,12 @@ func main() {
 
   switch myInt {
     case 14 : // myInt == 14
-      for myInt > 10 {
-        myInt--
+      for {
+        if myInt > 10 {
+          myInt--
+        } else {
+          break
+        }
       }
       fmt.Println("Your stupid age :", myInt)
     default :
@@ -137,22 +150,12 @@ func main() {
       -interface;
       -struct;
   */
-
-  type Bool = bool
-
-  type person = struct {
-    name string
-    sex Bool
-    age int
-  }
   	
-  tom := person{name : "Tom", age : 23, sex : false}
+  tom := person{name : "Tom", age : 23, sex : Bool{ Bool : false}}
 
   fmt.Println(tom)
 
 }
-
-type Int = int
 
 func Sum(variables ...Int) ( s Int, res string) {
 

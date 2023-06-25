@@ -18,11 +18,17 @@
       .carousel-caption
         position: absolute
         bottom: 200px
+        @media screen and (max-width: 578px)
+          transform: scale(80%)
         .caption-title
           font:
             size: 175px
             weight: 700
           letter-spacing: 1.5px
+          text-align: center
+          @media screen and (max-width: 768px) 
+            font:
+              size: calc(100px - 10%)
         .caption-body
           text:
             align: center
@@ -55,7 +61,6 @@
             letter-spacing: 4px
       &.active
         opacity: 1
-
   .carousel-indicators
     display: flex
     gap: 8px
@@ -73,10 +78,5 @@
         background:
           color: #fb383b
       cursor: pointer
-  
-@media (max-width: 600px)
-  .carousel
-    .carousel-caption
-      transform: scale(80%)
-    .carousel-indicators
+    @media (max-width: 578px)
       transform: scale(80%)
