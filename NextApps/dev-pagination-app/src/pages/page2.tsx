@@ -1,16 +1,15 @@
+import { NextPage } from "next";
+import dynamic from "next/dynamic";
 
-import { FC } from "react"
-import dynamic from "next/dynamic"
+const Layout = dynamic(() => import("@/components/layout/Layout"), {});
+const Page2 = dynamic(() => import("@/components/screens/Page2/Page2"), {});
 
-const Layout = dynamic(() => import("@/components/layout/Layout"), {})
-const Page2 = dynamic(() => import("@/components/screens/Page2/Page2"), {})
-
-const page2 : FC = () => {
+const page2 : NextPage = () => {
   return (
     <Layout>
-      <Page2 /> 
+      <Page2 />
     </Layout>
-  )
-}
+  );
+};
 
-export default page2
+export default page2;

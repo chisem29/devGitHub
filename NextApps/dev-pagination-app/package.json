@@ -17,12 +17,12 @@
     "body-parse": "^0.1.0",
     "body-parser": "^1.20.2",
     "next": "13.3.1",
+    "next-auth": "^4.22.1",
     "path": "^0.12.7",
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-query": "^3.39.3",
-    "react-query-devtools": "^2.6.3",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4",
     "util": "^0.12.5"

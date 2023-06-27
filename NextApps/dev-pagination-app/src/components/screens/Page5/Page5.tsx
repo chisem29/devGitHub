@@ -1,12 +1,19 @@
-import { FC } from "react"
+import { FC, useState } from "react"
 
 import { Oswald } from "next/font/google"
 
 import styles from "./Page.module.sass"
+import dataBody from "@/shared/interfaces/data"
 
 const fontOswald = Oswald({ weight : "400", subsets : []})
 
-const Page5 : FC = () => {
+const Page5 : FC<{ data : dataBody }> = ({ data }) => {
+
+  const [
+    isSpin,
+    setSpinner
+  ] = useState<boolean>(false)
+
   return (
     <div
       className={`
@@ -102,6 +109,9 @@ const Page5 : FC = () => {
           max-sm:self-center
         `}>
         <form
+          method="GET"
+          autoComplete="off"
+          action="http://localhost:3000/page5"
           className="flex flex-col items-center gap-y-6">
           <legend
             className={`
@@ -124,15 +134,21 @@ const Page5 : FC = () => {
               ["Name", "email address"]
                 .map(( itemInput, index ) =>
                   <input 
-                    type={index ? "text" : "email"}
+                    maxLength={24}
+                    required
+                    name={index ? "email" : "name" }
+                    type={index ? "email" : "text"}
                     placeholder={`Enter your ${itemInput}`}
-                    />
+                  />
                 )
             }
             <textarea
+              name="message"
+              maxLength={150}
               placeholder="Enter your message" />
           </div>
           <button
+            onClick={() => {setSpinner(true)}}
             className="
               bg-[#0000] 
               uppercase 
@@ -150,6 +166,37 @@ const Page5 : FC = () => {
             ">
             submit
           </button>
+          {
+            !isSpin ? 
+            <div
+              className={`
+                ${data.name ? "" : "hidden"}
+                w-[90%]
+                h-auto
+                bg-green-700
+                text-white
+                text-sm
+                p-4
+                text-center
+                ${styles.successStatusMes}
+              `}>
+              You have sent your message, @{data.name.slice(0, 10)}{data.name.length > 10 && "..."}!
+            </div> :
+            <div
+             className={`
+              ${data.name ? "" : "hidden"}
+              w-[90%]
+              h-auto
+            bg-yellow-600
+            text-white
+              text-sm
+              p-4
+              text-center
+              ${styles.loadingStatusMes}
+            `}>
+              Loading...
+           </div>
+          }
           <div
             className="mt-5 text-sm font-sans">
             Image from <a href="#" className="underline underline-offset-8">Freepik</a>
