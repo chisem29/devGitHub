@@ -1,19 +1,72 @@
 @@include("../layout/header.html")
 
+<header
+  class="header-wrap px-10 font-semibold inline-flex text-orange-700">
+  <h1 class="uppercase cursor-pointer tracking-wider">mode |</h1>
+  <select
+    class="
+      uppercase 
+      cursor-pointer 
+      w-auto
+      focus-visible:outline-none
+      tracking-wider
+      bg-[#0000]
+      gap-y-2
+    "
+    id="selectMode">
+    <option class="bg-[#302f2f] text-white font-semibold text-center active:bg-slate-900" selected value="default">default</option>
+    <option class="bg-[#302f2f] text-white font-semibold text-center active:bg-slate-900" value="mega">mega</option>
+    <option class="bg-[#302f2f] text-white font-semibold text-center active:bg-slate-900" value="mini">mini</option>
+  </select>
+</header> 
 <main
-  class="main-wrap">
+  data-mode="default" 
+  class="
+    main-wrap 
+    flex 
+    flex-col 
+    w-full 
+    h-[90%]
+    px-10 
+    gap-y-4
+  ">
   <div
+    class="
+      flex 
+      basis-1/3 
+      border-[#8d8d8d]
+      border-b-[1px] 
+      w-full 
+      max-w-full
+      items-center
+      justify-end 
+      pb-4
+      max-h-[100px]
+      overflow-y-scroll
+    "
     id="result">
+    <p
+      id="history">
+    </p>
     <h1
-      class="font-sans text-lg">
-      Result
+      id="targetValue"
+      class="
+        font-sans 
+        max-w-full
+        font-semibold break-words
+      ">
+      0
     </h1>
   </div>
-  <div id="tools">
-    <h1
-      class="font-sans text-lg text-gray-100">
-      Tools
-    </h1>
+  <div
+    class="
+      basis-2/3 
+      w-full 
+      text-xl 
+      translate-wide 
+      sm:text-2xl
+    " 
+    id="tools">
   </div>
 </main>
 

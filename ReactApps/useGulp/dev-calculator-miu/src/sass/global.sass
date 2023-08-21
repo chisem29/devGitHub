@@ -6,8 +6,53 @@ body, html
   margin: 0
   border: 0
   padding: 0
+  height: 100vh
+
+button
+  &:focus-visible
+    outline: 0
+
+*::-webkit-scrollbar
+  width: 10px!important
+
+*::-webkit-scrollbar-track
+  background: #00000000!important
+  border-radius: 0
+
+*::-webkit-scrollbar-thumb
+  background-color: #cfcaca00!important
+  border-radius: 0
+
+#wrapper
+  min-height: 100%!important
+
+@media (prefers-color-scheme: dark)
+  #wrapper
+    color: #fff!important
+    background: #000!important
+
+@media (prefers-color-scheme: light)
+  #wrapper
+    color: #000!important
+    background: #fff!important
 
 h1, h2, h3, h4, h5, h6
   margin-block-end: 0
   margin-block-start: 0
-  color: theme("colors.teal") !important
+
+button
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  @media screen and (max-width: 640px)
+    &:is(:focus-visible, :hover, :active)
+      &::after
+        content: ""
+        z-index: 1
+        position: absolute
+        width: 50px
+        height: 50px
+        background: #52515128
+        border:
+          radius: 50%
